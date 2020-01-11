@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>651</width>
+    <height>401</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>331</width>
+      <height>331</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>200</y>
+      <width>271</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="manageTab">
+     <attribute name="title">
+      <string>Управление</string>
+     </attribute>
+     <widget class="QPushButton" name="to_leftUpButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>◤</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_upButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>▲</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_rightUpButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>◥</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_leftButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>◀</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="renderButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Отрис.</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_rightButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>40</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>▶</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_leftDownButton">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>◣</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_downButton">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>70</y>
+        <width>51</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>▼</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="to_rightBottomButton">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>70</y>
+        <width>51</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>◢</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="settingTab">
+     <attribute name="title">
+      <string>Настройка</string>
+     </attribute>
+     <widget class="QDoubleSpinBox" name="to_upStep">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>10</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Размер шага перелистывания отрисовываемой части графика вверх&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Размер шага перелистывания отрисовываемой части графика вверх&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="minimum">
+       <double>0.500000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.500000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="to_leftStep">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Размер шага перелистывания отрисовываемой части графика влево&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Размер шага перелистывания отрисовываемой части графика влево&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="minimum">
+       <double>0.500000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.500000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="to_downStep">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>70</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>0.500000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.500000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="to_rightStep">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>40</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <double>0.500000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.500000000000000</double>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="scalePlane">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>51</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Масштаб отрисовываемого участка координатной прямой&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="whatsThis">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Масштаб отрисовываемого участка координатной прямой&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="minimum">
+       <double>2.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100.000000000000000</double>
+      </property>
+      <property name="value">
+       <double>10.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="DebugFlag">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>80</y>
+        <width>61</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Debug</string>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="tristate">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="gFunc0">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>60</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1 / $x</string>
+    </property>
+    <property name="maxLength">
+     <number>500</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="color_graph0">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>60</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string>red</string>
+    </property>
+    <property name="currentIndex">
+     <number>7</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>black</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/black.png</normaloff>images/colors_icons/black.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>blue</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/blue.png</normaloff>images/colors_icons/blue.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>fuchsia</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/fuchsia.png</normaloff>images/colors_icons/fuchsia.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>gold</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/gold.png</normaloff>images/colors_icons/gold.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>green</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/green.png</normaloff>images/colors_icons/green.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>greenyellow</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/greenyellow.png</normaloff>images/colors_icons/greenyellow.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>grey</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/grey.png</normaloff>images/colors_icons/grey.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>red</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/red.png</normaloff>images/colors_icons/red.png</iconset>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="gFunc1">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>100</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>$x * $x</string>
+    </property>
+    <property name="maxLength">
+     <number>500</number>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="gFunc2">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>140</y>
+      <width>171</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1 / sin($x * $x * $x)</string>
+    </property>
+    <property name="maxLength">
+     <number>500</number>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="color_graph1">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>100</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string>green</string>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>black</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/black.png</normaloff>images/colors_icons/black.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>blue</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/blue.png</normaloff>images/colors_icons/blue.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>fuchsia</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/fuchsia.png</normaloff>images/colors_icons/fuchsia.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>gold</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/gold.png</normaloff>images/colors_icons/gold.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>green</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/green.png</normaloff>images/colors_icons/green.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>greenyellow</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/greenyellow.png</normaloff>images/colors_icons/greenyellow.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>grey</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/grey.png</normaloff>images/colors_icons/grey.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>red</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/red.png</normaloff>images/colors_icons/red.png</iconset>
+     </property>
+    </item>
+   </widget>
+   <widget class="QComboBox" name="color_graph2">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>140</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="currentText">
+     <string>blue</string>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <item>
+     <property name="text">
+      <string>black</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/black.png</normaloff>images/colors_icons/black.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>blue</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/blue.png</normaloff>images/colors_icons/blue.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>fuchsia</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/fuchsia.png</normaloff>images/colors_icons/fuchsia.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>gold</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/gold.png</normaloff>images/colors_icons/gold.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>green</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/green.png</normaloff>images/colors_icons/green.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>greenyellow</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/greenyellow.png</normaloff>images/colors_icons/greenyellow.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>grey</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/grey.png</normaloff>images/colors_icons/grey.png</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>red</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>images/colors_icons/red.png</normaloff>images/colors_icons/red.png</iconset>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>20</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Графики математических функций</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>19</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
